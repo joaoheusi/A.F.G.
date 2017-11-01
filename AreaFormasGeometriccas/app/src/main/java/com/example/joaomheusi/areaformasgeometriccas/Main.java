@@ -32,11 +32,9 @@ public class Main extends AppCompatActivity {
     public void abrir(View quemClicou) {
         RadioGroup rgSelForma = (RadioGroup) findViewById(R.id.rgSelForma);
         if (rgSelForma.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(getApplicationContext(), "Selecione o sexo", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Selecione a forma geométrica.", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        char sexoSelecionado;
         if (rgSelForma.getCheckedRadioButtonId() == R.id.rBR) {
             abrirCR();
         } else if (rgSelForma.getCheckedRadioButtonId() == R.id.rBT) {

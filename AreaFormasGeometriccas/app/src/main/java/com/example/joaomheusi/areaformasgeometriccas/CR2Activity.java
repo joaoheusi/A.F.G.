@@ -2,6 +2,7 @@ package com.example.joaomheusi.areaformasgeometriccas;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class CR2Activity extends AppCompatActivity {
@@ -23,6 +24,9 @@ public class CR2Activity extends AppCompatActivity {
         TextView tvResultado = (TextView) findViewById(R.id.tvRes);
         tvResultado.setText( "Área: "+area+"cmˆ2");
     }
-
+    public void returnMenu(View quemClicou){
+        setResult(42);
+        finish();
+    }
 
 }

@@ -38,6 +38,16 @@ public class CC1Activity extends AppCompatActivity {
 
         Intent intencao = new Intent(getApplicationContext(), CC2Activity.class);
         intencao.putExtras(mochila);
-        startActivity(intencao);
+        startActivityForResult(intencao,99);
+
+    }
+    protected void onActivityResult(int requestCode,int resultCode,Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode == 99 && resultCode == 42){
+            finish();
+        }else {
+            return;
+        }
+
     }
 }
